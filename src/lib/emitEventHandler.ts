@@ -1,11 +1,21 @@
-import axios from 'axios'
-import React from 'react'
+import axios from "axios"
 
-async function emitEventHandler(event:string,data:any,socketId?:string) {
+async function emitEventHandler(
+  event: string,
+  data: any,
+  socketId?: string
+) {
   try {
-    await axios.post(`${process.env.NEXT_PUBLIC_SOCKET_SERVER}/notify`,{socketId,event,data})
-  } catch (error) {
-    console.log(error)
+    await axios.post(
+      `${process.env.NEXT_PUBLIC_SOCKET_SERVER}/notify`,
+      {
+        socketId,
+        event,
+        data
+      }
+    )
+  } catch (error: any) {
+    console.log("socket notify error", error.message)
   }
 }
 

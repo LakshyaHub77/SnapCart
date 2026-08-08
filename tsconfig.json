@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-, "src/lib/db.js"  ],
+, "src/lib/db.js", "src/components/OrderChatBot.jsx"  ],
   "exclude": ["node_modules"]
 }

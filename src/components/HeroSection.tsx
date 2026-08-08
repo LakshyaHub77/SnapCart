@@ -4,7 +4,9 @@ import { AnimatePresence } from 'motion/react'
 import React, { useEffect, useState } from 'react'
 import {motion} from "motion/react"
 import Image from 'next/image'
-
+import bg1 from "@/assets/bg1.jpg"
+import bg2 from "@/assets/bg2.jpg"
+import bg3 from "@/assets/bg3.jpg"
 
 
 
@@ -18,7 +20,7 @@ function HeroSection() {
     title: "Fresh Organic Groceries 🥦",
     subtitle: "Farm-fresh fruits, vegetables, and daily essentials delivered to you.",
     btnText: "Shop Now",
-   bg:"https://plus.unsplash.com/premium_photo-1663012860167-220d9d9c8aca?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+   bg: bg1
   },
   {
     id: 2,
@@ -26,7 +28,7 @@ function HeroSection() {
     title: "Fast & Reliable Delivery 🚚",
     subtitle: "We ensure your groceries reach your doorstep in no time.",
     btnText: "Order Now",
-    bg:"https://images.unsplash.com/photo-1683553170878-049f180627b0?q=80&w=1450&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    bg: bg2
   },
   {
     id: 3,
@@ -34,7 +36,7 @@ function HeroSection() {
     title: "Shop Anytime, Anywhere 📱",
     subtitle: "Easy and seamless online grocery shopping experience.",
     btnText: "Get Started",
-   bg:"https://plus.unsplash.com/premium_photo-1663091378026-7bee6e1c7247?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    bg: bg3
   },
 
     ] 

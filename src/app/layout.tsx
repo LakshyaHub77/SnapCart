@@ -1,17 +1,14 @@
-
 import type { Metadata } from "next";
-
 import "./globals.css";
 import Provider from "@/Provider";
 import StoreProvider from "@/redux/StoreProvider";
 import InitUser from "@/InitUser";
-
-
+import OrderChatBot from "@/components/OrderChatBot";
 
 
 export const metadata: Metadata = {
-  title: "Snapcart | 10 minutes grocery Delivery App",
-  description: "10 minutes grocery Delivery App",
+  title: "snapcart | 10 minutes grocery delivery App",
+  description: "10 minutes grocery delivery App",
 };
 
 export default function RootLayout({
@@ -20,17 +17,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="w-full min-h-screen bg-linear-to-b from-green-50 to-white">
+    <html
+      lang="en"
+     
+    >
+      <body className="w-full min-h-screenbg-linear-to-b from-green-50 to-white">
         <Provider>
-          <StoreProvider>
-          
-        <InitUser/>
-        
+        <StoreProvider>
+   <InitUser/>
         {children}
-          </StoreProvider>
+        <OrderChatBot/>
+        </StoreProvider>
         </Provider>
-      </body>
+        
+        </body>
     </html>
   );
 }
