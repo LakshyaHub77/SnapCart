@@ -27,9 +27,11 @@ jobs:
 
             echo "Installing dependencies..."
             npm install
+            echo "Removing stale Next.js build lock..."
+            rm -f .next/lock
 
             echo "Building Next.js application..."
-            npm run build
+            NODE_OPTIONS="--max-old-space-size=600" npm run build
 
             echo "Restarting PM2..."
             pm2 restart snapcart
