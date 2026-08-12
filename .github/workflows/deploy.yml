@@ -16,13 +16,22 @@ jobs:
           host: ${{ secrets.EC2_HOST }}
           username: ubuntu
           key: ${{ secrets.EC2_SSH_KEY }}
+
           script: |
+            set -e
+
             cd /home/ubuntu/SnapCart
 
+            echo "Pulling latest code..."
             git pull origin main
 
+            echo "Installing dependencies..."
             npm install
 
+            echo "Building Next.js application..."
             npm run build
 
+            echo "Restarting PM2..."
             pm2 restart snapcart
+
+            echo "Deployment completed successfully!"
